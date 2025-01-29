@@ -11,7 +11,7 @@ const registerUser = async (formData) => {
   data.append("image", formData.image);
 
   try {
-    const response = await axios.post('http://localhost:8080/api/users/register', data, {
+    const response = await axios.post('https://demobe-o9ve.onrender.com/api/users/register', data, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
@@ -30,7 +30,7 @@ const loginUser = async (formData) => {
   
 
   try {
-    const response = await axios.post('http://localhost:8080/api/users/login', data, {
+    const response = await axios.post('https://demobe-o9ve.onrender.com/api/users/login', data, {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -48,7 +48,7 @@ const verifyOtp = async (formData) => {
   try {
     console.log(formData.email);
     
-    const response = await axios.post('http://localhost:8080/api/users/verify-otp', data, {
+    const response = await axios.post('https://demobe-o9ve.onrender.com/api/users/verify-otp', data, {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -66,7 +66,7 @@ const getUserByEmail = async (email) => {
   try {
    
     
-    const response = await axios.post('http://localhost:8080/api/users/user', data, {
+    const response = await axios.post('https://demobe-o9ve.onrender.com/api/users/user', data, {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -83,7 +83,7 @@ const deleteAccount = async (_id) => {
   try {
    
     
-    const response = await axios.post('http://localhost:8080/api/users/delete', {_id}, {
+    const response = await axios.post('https://demobe-o9ve.onrender.com/api/users/delete', {_id}, {
       headers: {
         'Content-Type': 'application/json',
       },

@@ -16,7 +16,7 @@ const navigate = useNavigate();
        
         const response = await userService.getUserByEmail(email);
 
-        // Set the user data
+   
         setUser(response.data.user);
         setuser_id(response.data.user._id)
         
@@ -28,7 +28,7 @@ const navigate = useNavigate();
     };
 
     fetchUserData();
-  }, [email]); // Empty dependency array to run only once on component mount
+  }, [email]); 
   const handleDeleteAccount =async (e) => {
     const response = await userService.deleteAccount(user_id);
     if(response.status){

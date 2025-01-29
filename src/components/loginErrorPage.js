@@ -6,7 +6,7 @@ function LoginErrorPage() {
   const navigate = useNavigate();
 
   const handleGoBack = () => {
-    navigate('/'); // Replace with your login route
+    navigate('/'); 
   };
 
   return (
